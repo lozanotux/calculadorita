@@ -1,0 +1,16 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+
+Name=Calculadorita
+Comment=Calculator to solve simple equations
+
+# TRANSLATORS: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+Categories=GNOME;GTK;Utility;Calculator;
+Keywords=Calculation;Mathematics;Arithmetic;Scientific;
+
+Exec=com.github.lozanotux.calculadorita
+Icon=com.github.lozanotux.calculadorita
+Terminal=false
+
+X-GNOME-UsesNotifications=true

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <branding>
+    <color type="primary">#FF9500</color>
+    <color type="primary-text">#ffffff</color>
+  </branding>
+  
+  <id>com.github.lozanotux.calculadorita</id>
+
+  <name>Calculadorita</name>
+  <summary>Calculator to solve simple equations</summary>
+
+  <developer_name>Juan Pablo Lozano</developer_name>
+  <update_contact>lozanotux@gmail.com</update_contact>
+
+  <metadata_license>CC-BY-4.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
+  <description>
+    <p>
+      Calculator App writen in GTK+ 4 and Vala. For everyday use, to solve simple equations!
+    </p>
+  </description>
+
+  <launchable type="desktop-id">com.github.lozanotux.calculadorita.desktop</launchable>
+  <translation type="gettext">com.github.lozanotux.calculadorita</translation>
+  
+  <screenshots>
+    <screenshot type="default">
+      <image>https://screenshot1.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://screenshot2.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://screenshot3.png</image>
+    </screenshot>
+  </screenshots>
+  
+  <content_rating type="oars-1.1" />
+
+  <provides>
+    <binary>com.github.lozanotux.calculadorita</binary>
+  </provides>
+
+  <url type="bugtracker">https://github.com/lozanotux/calculadorita/issues</url>
+  <url type="help">https://github.com/lozanotux/calculadorita/wiki</url>
+  <url type="homepage">https://github.com/lozanotux/calculadorita</url>
+
+  <releases>
+    <release version="1.0.0" date="2024-01-18">
+      <description>
+        <p>Initial release, includes features such as:</p>
+        <ul>
+          <li>Application can be launched 🚀</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+</component>
