@@ -14,6 +14,16 @@
     }
 
     protected override void activate () {
+        // Load CSS styles
+        var provider = new Gtk.CssProvider ();
+        provider.load_from_resource ("com/github/lozanotux/calculadorita/application.css");
+        Gtk.StyleContext.add_provider_for_display (
+            Gdk.Display.get_default (),
+            provider,
+            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+        );
+
+        // Main Window
         main_window = new MainWindow (this);
         main_window.present ();
     }

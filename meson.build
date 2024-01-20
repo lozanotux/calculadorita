@@ -7,9 +7,20 @@ i18n = import('i18n')
 # Set our translation domain
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
 
+# Load CSS file
+gnome = import('gnome')
+
+# Tell meson where to find our resources file and to compile it as a GResource
+gresource = gnome.compile_resources(
+    'gresource',
+    'data' / 'css.gresource.xml',
+    source_dir: 'data'
+)
+
 # Create a new executable, list the files we want to compile, list the dependencies we need, and install
 executable(
     meson.project_name(),
+    gresource,
     'src' / 'App.vala',
     'src' / 'Constants.vala',
     'src' / 'utils' / 'Engine.vala',
@@ -57,7 +68,6 @@ foreach i : icon_sizes
     )
 endforeach
 
-gnome = import('gnome')
 gnome.post_install(glib_compile_schemas: true)
 
 subdir('data')

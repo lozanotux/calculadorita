@@ -1,0 +1,63 @@
+@define-color primaryGrey #D4D4D2;
+@define-color primaryBlack #1C1C1C;
+@define-color primaryDarkGrey #505050;
+@define-color primaryOrange #FF9500;
+
+/*******************
+ *   MAIN WINDOW
+ *******************/
+.main-window-dark {
+    background-color: @primaryBlack;
+}
+
+.main-window-grid {
+    margin-left: 8px;
+    margin-top: 24px;
+    margin-bottom: 9px;
+}
+
+.result-text {
+    margin-top: 24px;
+    font-size: 48px;
+    font-weight: 300;
+}
+
+/*******************
+ *   CALC BUTTONS
+ *******************/
+.action-button, .zero-button {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.number-button, .operator-button {
+    text-shadow: 0px 0px 4px @primaryDarkGrey;
+    border-radius: 50%;
+}
+
+.action-button, .number-button, .zero-button, .operator-button {
+    font-size: 26px;
+    font-weight: 400;
+    padding: 16px 24px;
+}
+
+.action-button:hover, .number-button:hover, .zero-button:hover, .operator-button:hover {
+    filter: brightness(1.4);
+}
+
+.action-button {
+    background-color: @primaryGrey;
+    color: #000000;
+}
+
+.number-button, .zero-button {
+    background-color: @primaryDarkGrey;
+    color: #FFFFFF;
+}
+
+.operator-button {
+    background-color: @primaryOrange;
+    color: #FFFFFF;
+}

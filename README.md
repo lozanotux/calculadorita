@@ -2,6 +2,8 @@
 
 A calculator app writen in Vala and GTK+ for GNU/Linux by Argentinian guy 🇦🇷 🖱️
 
+![screenshot](./data/media/screenshot1.png)
+
 ## How to build this app locally?
 
 1. Install required dependencies:
