@@ -1,6 +1,13 @@
 # project name and programming language
 project('com.github.lozanotux.calculadorita', 'vala', 'c')
 
+# Needed for libmatheval VAPI files
+# for more information refer to: https://wiki.gnome.org/Projects/Vala/Bindings
+add_project_arguments(
+    ['--vapidir', join_paths(meson.current_source_dir(), 'vapi')],
+    language: 'vala'
+)
+
 # Include the translations module
 i18n = import('i18n')
 
@@ -23,10 +30,10 @@ executable(
     gresource,
     'src' / 'App.vala',
     'src' / 'Constants.vala',
-    'src' / 'utils' / 'Engine.vala',
     'src' / 'widgets' / 'MainWindow.vala',
     dependencies: [
-        dependency('gtk4')
+        dependency('gtk4'),
+        dependency('libmatheval')
     ],
     install: true
 )
