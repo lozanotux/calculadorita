@@ -9,7 +9,7 @@ A calculator app writen in Vala and GTK+ for GNU/Linux by Argentinian guy ðŸ‡¦ðŸ
 1. Install required dependencies:
   * **Ubuntu:**
     ```bash
-    sudo apt install build-essential desktop-file-utils gettext gobject-introspection libgee-0.8-dev libgirepository1.0-dev libglib2.0-dev libgtk-4-dev libxml2-dev libxml2-utils meson cmake valac valadoc libmatheval-dev
+    sudo apt install build-essential desktop-file-utils gettext gobject-introspection libgee-0.8-dev libgirepository1.0-dev libglib2.0-dev libgtk-4-dev libxml2-dev libxml2-utils meson cmake valac valadoc libmatheval-dev python3
     ```
 
 2. Configure installation target directory and prepare the source code:

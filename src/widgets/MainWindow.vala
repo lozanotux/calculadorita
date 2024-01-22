@@ -195,10 +195,16 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     void on_press_equal (Gtk.Button button) {
-        string expression = math_opperation.replace (",", ".").replace ("×", "*").replace ("÷", "/");
+        /* Option 1: use libmatheval (this method has several bugs)
+         * I mean, works... but for some reason operations with double values
+         * are treated as integer (losing decimals values after comma.) 
+         */
+        /* string expression = math_opperation.replace (",", ".").replace ("×", "*").replace ("÷", "/");
         var e = matheval.Evaluator.create (expression);
         string answer = "%g".printf(e.evaluate_x(0));
         result_entry.set_text(answer);
+        math_opperation="";*/
+        result_entry.set_text(Engine.eval_math_expression (math_opperation));
         math_opperation="";
     }
 

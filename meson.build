@@ -30,6 +30,7 @@ executable(
     gresource,
     'src' / 'App.vala',
     'src' / 'Constants.vala',
+    'src' / 'utils' / 'Engine.vala',
     'src' / 'widgets' / 'MainWindow.vala',
     dependencies: [
         dependency('gtk4'),
