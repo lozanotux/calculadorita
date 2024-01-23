@@ -1,15 +1,17 @@
 # Calculadorita
 
-A calculator app writen in Vala and GTK+ for GNU/Linux by Argentinian guy 🇦🇷 🖱️
+A calculator app writen in Python3 and GTK+ 4 for GNU/Linux by Argentinian guy 🇦🇷 🖱️
 
 ![screenshot](./data/media/screenshot1.png)
+
+> **NOTE:** For a tutorial of Python + GTK4 see next repository: [Taiko2k/GTK4PythonTutorial](https://github.com/Taiko2k/GTK4PythonTutorial).
 
 ## How to build this app locally?
 
 1. Install required dependencies:
   * **Ubuntu:**
     ```bash
-    sudo apt install build-essential desktop-file-utils gettext gobject-introspection libgee-0.8-dev libgirepository1.0-dev libglib2.0-dev libgtk-4-dev libxml2-dev libxml2-utils meson cmake valac valadoc libmatheval-dev python3
+    sudo apt install build-essential desktop-file-utils gettext gobject-introspection libgee-0.8-dev libgirepository1.0-dev libglib2.0-dev libgtk-4-dev libadwaita-1-dev libxml2-dev libxml2-utils meson cmake python3
     ```
 
 2. Configure installation target directory and prepare the source code:

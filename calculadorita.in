@@ -1,0 +1,17 @@
+#!@PYTHON@
+
+import os
+import sys
+import signal
+import gettext
+
+VERSION = '@VERSION@'
+pkgdatadir = '@DATA_DIR@'
+localedir = '@LOCALE_DIR@'
+
+signal.signal(signal.SIGINT, signal.SIG_DFL)
+gettext.install('calculadorita', localedir)
+
+if __name__ == '__main__':
+    from calculadorita.application import main
+    sys.exit(main())
