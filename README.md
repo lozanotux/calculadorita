@@ -4,6 +4,9 @@ A calculator app writen in Vala and GTK+ for GNU/Linux by Argentinian guy 🇦�
 
 ![screenshot](./data/media/screenshot1.png)
 
+• [Vala version](https://github.com/lozanotux/calculadorita/tree/main)
+• [Python3 version](https://github.com/lozanotux/calculadorita/tree/python-version)
+
 ## How to build this app locally?
 
 1. Install required dependencies:
