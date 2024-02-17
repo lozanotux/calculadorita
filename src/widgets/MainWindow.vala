@@ -117,6 +117,80 @@ public class MainWindow : Gtk.ApplicationWindow {
         main_box.append (result_entry);
         main_box.append (grid);
         set_child (main_box);
+
+        // Keys Events
+        var key_controller = new Gtk.EventControllerKey ();
+        key_controller.key_pressed.connect ((keyval, keycode) => {
+            switch (keyval) {
+            case 48:
+            case 65456:
+                on_press_0 (zero_button);
+                break;
+            case 49:
+            case 65457:
+                on_press_1 (one_button);
+                break;
+            case 50:
+            case 65458:
+                on_press_2 (two_button);
+                break;
+            case 51:
+            case 65459:
+                on_press_3 (three_button);
+                break;
+            case 52:
+            case 65460:
+                on_press_4 (four_button);
+                break;
+            case 53:
+            case 65461:
+                on_press_5 (five_button);
+                break;
+            case 54:
+            case 65462:
+                on_press_6 (six_button);
+                break;
+            case 55:
+            case 65463:
+                on_press_7 (seven_button);
+                break;
+            case 56:
+            case 65464:
+                on_press_8 (eight_button);
+                break;
+            case 57:
+            case 65465:
+                on_press_9 (nine_button);
+                break;
+            case 44:
+            case 46:
+                on_press_dot (comma_button);
+                break;
+            case 47:
+            case 65455:
+                on_press_divide (divide_button);
+                break;
+            case 42:
+            case 65450:
+                on_press_multiply (multiply_button);
+                break;
+            case 43:
+            case 65451:
+                on_press_plus (sum_button);
+                break;
+            case 45:
+            case 65453:
+                on_press_minus (subtract_button);
+                break;
+            case 61:
+                on_press_equal (equal_button);
+                break;
+            case 65307:
+                on_press_ac (ac_button);
+                break;
+            }
+        });
+        child.add_controller (key_controller);
     }
 
     void on_press_1 (Gtk.Button button) {
