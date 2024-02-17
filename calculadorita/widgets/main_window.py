@@ -1,4 +1,5 @@
 import calculadorita.constants as constants
+import logging
 import gi
 gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk
@@ -173,14 +174,17 @@ class MainWindow(Gtk.ApplicationWindow):
         self.math_opperation = self.math_opperation.replace(",", ".")
         self.math_opperation = self.math_opperation.replace("×", "*")
         self.math_opperation = self.math_opperation.replace("÷", "/")
-        self.result = eval(self.math_opperation)
-        if type(self.result) is not int:
-            digits = int(len(str(self.result).split(".")[1]))
-            if digits > 2:
-                digits = int(digits/2)
-                self.result = round(self.result, digits)
-        self.result_entry.set_text(str(self.result).replace(".", ","))
-        self.math_opperation=""
+        try:
+            self.result = eval(self.math_opperation)
+            if type(self.result) is not int:
+                digits = int(len(str(self.result).split(".")[1]))
+                if digits > 2:
+                    digits = int(digits/2)
+                    self.result = round(self.result, digits)
+            self.result_entry.set_text(str(self.result).replace(".", ","))
+            self.math_opperation=""
+        except:
+            logging.exception("Math Expression is not valid or simply zero", exc_info=False)
 
     def on_press_ac(self, button):
         self.math_opperation=""
